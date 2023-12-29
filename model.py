@@ -39,7 +39,7 @@ class QTrainer:
         reward = torch.tensor(reward, dtype=torch.float)
 
         if len(state.shape) == 1:
-            # torch.unsqeeze(input, dim) = Returns a new tensor with a dimension
+            # Returns a new tensor with a dimension
             # of size one inserted at the specified position
             state = torch.unsqeeze(state, 0)
             next_state = torch.unsqueeze(next_state, 0)
